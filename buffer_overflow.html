@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+                                <html>
+                                <head>
+                                <meta charset="UTF-8" />
+<title>
+How buffer overflow attacks work?
+</title>
+<link rel = "stylesheet" href="css/blog-page.css">
+                                </head>
+                                <body>
+                            
+<header>
+    <div class = "blog-header">
+        <a href ="https://www.linkedin.com/in/ayush-jain-122434191/"><img src = "icons/LI-In-Bug.png" width="30" height="30"></a>
+
+        <a href="https://www.github.com/cs16b004">
+            <img src = "icons/github-mark/github-mark.png" width="30" height="30">
+         </a>
+
+        <a href="mailto: ayush.jain.1@stonybrook.edu"><img src="icons/mailLogo.png" width="30" height="30"></a>
+</div>
+</header>
+
+<div class= "blog-title">
+<h1> How buffer overflow attacks work?</h1>
+</div>
+<div class= "blog-body">
+<p>An overflowing text on buffer overflow attacks.</p>
+<p><strong>What is a buffer overflow attack?</strong>
+An attack where the attacker has control over your program, your EIP (Instruction Pointer Register) by corrupting memory
+can be labelled as buffer overflow attack. Readers can stop here if they feel this is enough:). Please note such attacks mostly 
+happen on programs compiled from C/C++ as they provide programmers to access any region of program memory without any checks.</p>
+<p>C/C++ programs run in the free world!</p>
+<p>To understand how one can take control, we first need to understand how a <code>compiled</code> program sees memory and how function calls take place.</p>
+
+<h3 id="memory-layout-of-a-compiled-program" class="section">Memory layout of a &quot;compiled&quot; program</h3>
+<ul>
+  <li>
+    A process (running program) sees memory as contiguous region of bytes, labelled from 0 to some arbitrary size set by OS overlords. 
+    <ul>
+      <li>Physically they might not be contiguous, they are organized into pages and are logically mapped to appear continuous.</li>
+      <li><img src="images/rocess_mem.png" alt=""></li>
+      <li>the <code>.text</code> section has your compiled code, <code>.data</code> has string and other constants, <code>.bss</code> section to keep static and global variables.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="stack-and-function-call" class="section">Stack and function call</h3>
+<p>** Work in Progress **</p>
+
+<h3 id="overflow-and-rule">Overflow and rule</h3>
+</div>
+</body>
+</html>
